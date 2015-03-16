@@ -14,9 +14,8 @@
 		D383747F1AB78605009C0523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D383747D1AB78605009C0523 /* Main.storyboard */; };
 		D38374811AB78605009C0523 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38374801AB78605009C0523 /* Images.xcassets */; };
 		D38374841AB78605009C0523 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38374821AB78605009C0523 /* LaunchScreen.xib */; };
-		D38374901AB78606009C0523 /* atMentions_AlbertoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D383748F1AB78606009C0523 /* atMentions_AlbertoTests.m */; };
-		D383749A1AB795ED009C0523 /* KeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38374991AB795ED009C0523 /* KeyboardTests.m */; };
-		D383749C1AB7960B009C0523 /* FindMentionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D383749B1AB7960B009C0523 /* FindMentionsTest.m */; };
+		D383749A1AB795ED009C0523 /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38374991AB795ED009C0523 /* ViewControllerTests.m */; };
+		D38374A01AB798C0009C0523 /* ViewController+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D383749F1AB798C0009C0523 /* ViewController+Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +43,9 @@
 		D38374801AB78605009C0523 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D38374831AB78605009C0523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D38374891AB78606009C0523 /* atMentions-AlbertoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atMentions-AlbertoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D383748E1AB78606009C0523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D383748F1AB78606009C0523 /* atMentions_AlbertoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = atMentions_AlbertoTests.m; sourceTree = "<group>"; };
-		D38374991AB795ED009C0523 /* KeyboardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyboardTests.m; path = "atMentions-Alberto/Tests/KeyboardTests.m"; sourceTree = "<group>"; };
-		D383749B1AB7960B009C0523 /* FindMentionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindMentionsTest.m; path = "atMentions-Alberto/Tests/FindMentionsTest.m"; sourceTree = "<group>"; };
+		D38374991AB795ED009C0523 /* ViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTests.m; path = "atMentions-Alberto/Tests/ViewControllerTests.m"; sourceTree = "<group>"; };
+		D383749E1AB798C0009C0523 /* ViewController+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+Tests.h"; path = "atMentions-Alberto/Tests/Categories/ViewController+Tests.h"; sourceTree = "<group>"; };
+		D383749F1AB798C0009C0523 /* ViewController+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+Tests.m"; path = "atMentions-Alberto/Tests/Categories/ViewController+Tests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 			children = (
 				D383749D1AB79610009C0523 /* Tests */,
 				D38374721AB78605009C0523 /* atMentions-Alberto */,
-				D383748C1AB78606009C0523 /* atMentions-AlbertoTests */,
 				D38374711AB78605009C0523 /* Products */,
 				77D2D330EE993D2F0C1779F9 /* Pods */,
 				C8F594A59CDEE14ED8A65E97 /* Frameworks */,
@@ -131,30 +128,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D383748C1AB78606009C0523 /* atMentions-AlbertoTests */ = {
-			isa = PBXGroup;
-			children = (
-				D383748F1AB78606009C0523 /* atMentions_AlbertoTests.m */,
-				D383748D1AB78606009C0523 /* Supporting Files */,
-			);
-			path = "atMentions-AlbertoTests";
-			sourceTree = "<group>";
-		};
-		D383748D1AB78606009C0523 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D383748E1AB78606009C0523 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		D383749D1AB79610009C0523 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D383749B1AB7960B009C0523 /* FindMentionsTest.m */,
-				D38374991AB795ED009C0523 /* KeyboardTests.m */,
+				D38374991AB795ED009C0523 /* ViewControllerTests.m */,
+				D38374A11AB798E1009C0523 /* Categories */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		D38374A11AB798E1009C0523 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D383749E1AB798C0009C0523 /* ViewController+Tests.h */,
+				D383749F1AB798C0009C0523 /* ViewController+Tests.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +283,7 @@
 			files = (
 				D383747C1AB78605009C0523 /* ViewController.m in Sources */,
 				D38374791AB78605009C0523 /* AppDelegate.m in Sources */,
+				D38374A01AB798C0009C0523 /* ViewController+Tests.m in Sources */,
 				D38374761AB78605009C0523 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,9 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D383749A1AB795ED009C0523 /* KeyboardTests.m in Sources */,
-				D38374901AB78606009C0523 /* atMentions_AlbertoTests.m in Sources */,
-				D383749C1AB7960B009C0523 /* FindMentionsTest.m in Sources */,
+				D383749A1AB795ED009C0523 /* ViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
