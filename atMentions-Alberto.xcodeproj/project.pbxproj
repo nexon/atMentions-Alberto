@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C6FB7187908D30B4F9C84E9 /* libPods-atMentions-AlbertoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B203F8012DE7A6F89266352 /* libPods-atMentions-AlbertoTests.a */; };
 		D38374761AB78605009C0523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D38374751AB78605009C0523 /* main.m */; };
 		D38374791AB78605009C0523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D38374781AB78605009C0523 /* AppDelegate.m */; };
 		D383747C1AB78605009C0523 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383747B1AB78605009C0523 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		D38374811AB78605009C0523 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38374801AB78605009C0523 /* Images.xcassets */; };
 		D38374841AB78605009C0523 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38374821AB78605009C0523 /* LaunchScreen.xib */; };
 		D38374901AB78606009C0523 /* atMentions_AlbertoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D383748F1AB78606009C0523 /* atMentions_AlbertoTests.m */; };
+		D383749A1AB795ED009C0523 /* KeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38374991AB795ED009C0523 /* KeyboardTests.m */; };
+		D383749C1AB7960B009C0523 /* FindMentionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D383749B1AB7960B009C0523 /* FindMentionsTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1691E5E564BBFE70B1F61E04 /* Pods-atMentions-AlbertoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atMentions-AlbertoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-atMentions-AlbertoTests/Pods-atMentions-AlbertoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B203F8012DE7A6F89266352 /* libPods-atMentions-AlbertoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atMentions-AlbertoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF3F75FD5342AAFE2BF0F29 /* Pods-atMentions-AlbertoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atMentions-AlbertoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-atMentions-AlbertoTests/Pods-atMentions-AlbertoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D38374701AB78605009C0523 /* atMentions-Alberto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atMentions-Alberto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38374741AB78605009C0523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38374751AB78605009C0523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		D38374891AB78606009C0523 /* atMentions-AlbertoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atMentions-AlbertoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383748E1AB78606009C0523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D383748F1AB78606009C0523 /* atMentions_AlbertoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = atMentions_AlbertoTests.m; sourceTree = "<group>"; };
+		D38374991AB795ED009C0523 /* KeyboardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyboardTests.m; path = "atMentions-Alberto/Tests/KeyboardTests.m"; sourceTree = "<group>"; };
+		D383749B1AB7960B009C0523 /* FindMentionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindMentionsTest.m; path = "atMentions-Alberto/Tests/FindMentionsTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,18 +62,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6FB7187908D30B4F9C84E9 /* libPods-atMentions-AlbertoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77D2D330EE993D2F0C1779F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1691E5E564BBFE70B1F61E04 /* Pods-atMentions-AlbertoTests.debug.xcconfig */,
+				9CF3F75FD5342AAFE2BF0F29 /* Pods-atMentions-AlbertoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8F594A59CDEE14ED8A65E97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B203F8012DE7A6F89266352 /* libPods-atMentions-AlbertoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D38374671AB78605009C0523 = {
 			isa = PBXGroup;
 			children = (
+				D383749D1AB79610009C0523 /* Tests */,
 				D38374721AB78605009C0523 /* atMentions-Alberto */,
 				D383748C1AB78606009C0523 /* atMentions-AlbertoTests */,
 				D38374711AB78605009C0523 /* Products */,
+				77D2D330EE993D2F0C1779F9 /* Pods */,
+				C8F594A59CDEE14ED8A65E97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +148,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D383749D1AB79610009C0523 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D383749B1AB7960B009C0523 /* FindMentionsTest.m */,
+				D38374991AB795ED009C0523 /* KeyboardTests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D38374961AB78606009C0523 /* Build configuration list for PBXNativeTarget "atMentions-AlbertoTests" */;
 			buildPhases = (
+				7486A814E17894042638BC01 /* Check Pods Manifest.lock */,
 				D38374851AB78606009C0523 /* Sources */,
 				D38374861AB78606009C0523 /* Frameworks */,
 				D38374871AB78606009C0523 /* Resources */,
+				1E25DCDEDCEB99947B7A5579 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +254,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E25DCDEDCEB99947B7A5579 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-atMentions-AlbertoTests/Pods-atMentions-AlbertoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7486A814E17894042638BC01 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D383746C1AB78605009C0523 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -229,7 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D383749A1AB795ED009C0523 /* KeyboardTests.m in Sources */,
 				D38374901AB78606009C0523 /* atMentions_AlbertoTests.m in Sources */,
+				D383749C1AB7960B009C0523 /* FindMentionsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +436,7 @@
 		};
 		D38374971AB78606009C0523 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1691E5E564BBFE70B1F61E04 /* Pods-atMentions-AlbertoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -380,6 +456,7 @@
 		};
 		D38374981AB78606009C0523 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF3F75FD5342AAFE2BF0F29 /* Pods-atMentions-AlbertoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -412,6 +489,7 @@
 				D38374951AB78606009C0523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D38374961AB78606009C0523 /* Build configuration list for PBXNativeTarget "atMentions-AlbertoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +498,7 @@
 				D38374981AB78606009C0523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
