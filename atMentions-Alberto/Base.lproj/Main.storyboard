@@ -18,49 +18,53 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJi-lt-UsA">
-                                <rect key="frame" x="16" y="8" width="568" height="231"/>
+                                <rect key="frame" x="16" y="13" width="568" height="206"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-3r-512">
-                                        <rect key="frame" x="8" y="8" width="513" height="167"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" text="Write a comment" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-3r-512">
+                                        <rect key="frame" x="0.0" y="0.0" width="545" height="160"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="167" id="xLb-OB-GGB"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="1We-wR-RiX"/>
+                                        </connections>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01K-90-01T">
+                                        <rect key="frame" x="8" y="168" width="74" height="30"/>
+                                        <state key="normal" title="Add Photo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv5-xi-v5D">
-                                        <rect key="frame" x="529" y="13" width="29" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="531" y="8" width="29" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="29" id="59s-Ug-4Dh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.81568627449999997" green="0.0" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OgC-hm-kOC">
-                                        <rect key="frame" x="8" y="176" width="240" height="47"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Wmh-3r-512" firstAttribute="leading" secondItem="gJi-lt-UsA" secondAttribute="leading" constant="8" id="12M-SS-EIw"/>
-                                    <constraint firstItem="Tv5-xi-v5D" firstAttribute="top" secondItem="gJi-lt-UsA" secondAttribute="top" constant="13" id="86Q-EH-q4E"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wmh-3r-512" secondAttribute="trailing" constant="47" id="Afy-23-mhu"/>
-                                    <constraint firstAttribute="bottom" secondItem="OgC-hm-kOC" secondAttribute="bottom" constant="8" id="CFx-d0-moJ"/>
-                                    <constraint firstItem="Tv5-xi-v5D" firstAttribute="leading" secondItem="Wmh-3r-512" secondAttribute="trailing" constant="8" id="Enm-Vy-e72"/>
-                                    <constraint firstAttribute="trailing" secondItem="Tv5-xi-v5D" secondAttribute="trailing" constant="10" id="M8o-hy-NbL"/>
-                                    <constraint firstItem="Wmh-3r-512" firstAttribute="top" secondItem="gJi-lt-UsA" secondAttribute="top" constant="8" id="RZC-J3-KUH"/>
-                                    <constraint firstAttribute="height" constant="231" id="VuR-NR-wyu"/>
-                                    <constraint firstItem="OgC-hm-kOC" firstAttribute="top" secondItem="Wmh-3r-512" secondAttribute="bottom" constant="1" id="XrU-2l-HVx"/>
-                                    <constraint firstItem="OgC-hm-kOC" firstAttribute="leading" secondItem="gJi-lt-UsA" secondAttribute="leading" constant="8" id="dfk-Ae-eP5"/>
-                                    <constraint firstAttribute="trailing" secondItem="OgC-hm-kOC" secondAttribute="trailing" constant="320" id="jDM-BA-GYT"/>
+                                    <constraint firstItem="Tv5-xi-v5D" firstAttribute="top" secondItem="gJi-lt-UsA" secondAttribute="top" constant="8" id="4Dj-1H-HKe"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wmh-3r-512" secondAttribute="bottom" constant="46" id="9qV-cG-R7Y"/>
+                                    <constraint firstItem="Wmh-3r-512" firstAttribute="top" secondItem="gJi-lt-UsA" secondAttribute="top" id="OEH-Ih-rqZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tv5-xi-v5D" secondAttribute="trailing" constant="8" id="OEa-NT-cdt"/>
+                                    <constraint firstAttribute="bottom" secondItem="01K-90-01T" secondAttribute="bottom" constant="8" id="YYj-hN-EeY"/>
+                                    <constraint firstItem="Wmh-3r-512" firstAttribute="leading" secondItem="gJi-lt-UsA" secondAttribute="leading" id="YcQ-bX-OQh"/>
+                                    <constraint firstItem="01K-90-01T" firstAttribute="leading" secondItem="gJi-lt-UsA" secondAttribute="leading" constant="8" id="dMn-KW-QgA"/>
+                                    <constraint firstItem="01K-90-01T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wmh-3r-512" secondAttribute="bottom" constant="8" id="mFe-AX-seY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wmh-3r-512" secondAttribute="trailing" constant="23" id="vwI-9b-k0d"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.75686274509999996" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gJi-lt-UsA" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="OG3-ab-Qcz"/>
-                            <constraint firstItem="gJi-lt-UsA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="ifr-8G-yIn"/>
-                            <constraint firstItem="gJi-lt-UsA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="vE9-eh-5Bq"/>
+                            <constraint firstItem="gJi-lt-UsA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="62S-sa-t32"/>
+                            <constraint firstItem="gJi-lt-UsA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7iF-TQ-EOa"/>
+                            <constraint firstItem="gJi-lt-UsA" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="khA-XW-LPY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gJi-lt-UsA" secondAttribute="bottom" constant="317" id="vSi-s7-zcW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SmartMoms" id="vQN-bO-2C2">
@@ -69,6 +73,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="gJi-lt-UsA" id="0xD-Mt-tfP"/>
+                        <outlet property="keyboardHeight" destination="vSi-s7-zcW" id="nhq-9D-KWB"/>
                         <outlet property="textView" destination="Wmh-3r-512" id="oyK-nI-fRF"/>
                     </connections>
                 </viewController>
