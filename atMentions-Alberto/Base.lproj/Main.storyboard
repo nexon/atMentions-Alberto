@@ -8,7 +8,7 @@
         <!--SmartMoms-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialController" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -68,7 +68,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SmartMoms" id="vQN-bO-2C2">
-                        <barButtonItem key="leftBarButtonItem" title="Post" id="wS8-Jk-XUq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wS8-Jk-XUq"/>
                         <barButtonItem key="rightBarButtonItem" title="Post" id="Uhi-a2-J1c"/>
                     </navigationItem>
                     <connections>

@@ -13,9 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
 
-
-
 - (void)keyboardWillShow:(id)sender;
+- (NSMutableArray *)findMentions:(NSString *)text;
 @end
 
 @implementation ViewController
