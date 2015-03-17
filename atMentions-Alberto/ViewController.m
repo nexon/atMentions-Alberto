@@ -7,11 +7,14 @@
 //
 
 #import "ViewController.h"
+#define CHAR_LIMIT 500
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
+@property (weak, nonatomic) IBOutlet UILabel *charLimitLabel;
 
 - (void)keyboardWillShow:(id)sender;
 - (NSMutableArray *)findMentions:(NSString *)text;
@@ -38,10 +41,21 @@
 {
     NSString *text = textView.text;
     
+    self.charLimitLabel.text = [NSString stringWithFormat:@"%li", CHAR_LIMIT - text.length];
+    
     NSArray *mentions = [self findMentions:text];
     
     NSLog(@"%s: %@", __func__, [self findMentions:text]);
     
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    NSString *enteredText = textView.text;
+    
+    if(enteredText.length >= 500) return NO;
+    
+    return YES;
 }
 
 
