@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewSpace;
 @property (strong, nonatomic) NSMutableArray  *contacts;
+@property (strong, nonatomic) NSMutableArray  *filteredArray;
+@property (strong, nonatomic) ATMContact      *selectedContact;
+@property (strong, nonatomic) NSString        *mention;
 
 - (void)keyboardWillShow:(id)sender;
 - (NSMutableArray *)findMentions:(NSString *)text;
@@ -35,6 +38,7 @@
     
     self.tableView.delegate   = self;
     self.tableView.dataSource = self;
+    self.filteredArray        = [NSMutableArray array];
     
     [self loadContacts];
 }
@@ -56,6 +60,8 @@
     NSArray *mentions = [self findMentions:text];
     
     if(mentions.count > 0) {
+        self.mention = mentions[0];
+        [self searchNameForMention:mentions[0]];
         self.tableView.hidden = NO;
     } else {
         self.tableView.hidden = YES;
@@ -83,7 +89,7 @@
     
     NSError *error = nil;
     
-    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"(@[a-zA-Z0-9_]+)"
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"(@[a-zA-Z0-9_\\s]+)"
                                                                       options:NSRegularExpressionCaseInsensitive
                                                                         error:&error];
     
@@ -121,13 +127,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.selectedContact = self.filteredArray[indexPath.row];
+    
+    NSString *replacedText = [self.textView.text stringByReplacingOccurrencesOfString:self.mention withString:self.selectedContact.name];
+    
+    self.textView.text = replacedText;
+    self.selectedContact = nil;
+    self.mention         = nil;
+    
+    self.tableView.hidden = YES;
     
 }
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.contacts.count;
+    return self.filteredArray.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,26 +150,38 @@
     UITableViewCell *cell;
     static NSString *ATMContactCell = @"ATMContactCell";
     
-    ATMContact *contact = self.contacts[indexPath.row];
+    ATMContact *contact = self.filteredArray[indexPath.row];
     cell = [self.tableView dequeueReusableCellWithIdentifier:ATMContactCell forIndexPath:indexPath];
     cell.textLabel.text = contact.name;
+    cell.imageView.image = contact.image;
     
     return cell;
 }
 
 - (void)loadContacts
 {
-    self.contacts = [NSMutableArray arrayWithArray:@[[ATMContact contactFor:@"Shannon Leigh" andImage:nil],
-                                                     [ATMContact contactFor:@"Meredith Overmyer" andImage:nil],
-                                                     [ATMContact contactFor:@"Amber Colvard" andImage:nil],
-                                                     [ATMContact contactFor:@"Allie Siarto" andImage:nil],
-                                                     [ATMContact contactFor:@"Kim Rothwell" andImage:nil],
-                                                     [ATMContact contactFor:@"Ashlee Finley" andImage:nil],
-                                                     [ATMContact contactFor:@"John Doe" andImage:nil],
-                                                     [ATMContact contactFor:@"Janne Doe" andImage:nil],
-                                                     [ATMContact contactFor:@"Rick Maddon" andImage:nil],
-                                                     [ATMContact contactFor:@"July Safford" andImage:nil]
+    self.contacts = [NSMutableArray arrayWithArray:@[[ATMContact contactFor:@"Shannon Leigh" andImage:[UIImage imageNamed:@"1"]],
+                                                     [ATMContact contactFor:@"Meredith Overmyer" andImage:[UIImage imageNamed:@"2"]],
+                                                     [ATMContact contactFor:@"Amber Colvard" andImage:[UIImage imageNamed:@"3"]],
+                                                     [ATMContact contactFor:@"Allie Siarto" andImage:[UIImage imageNamed:@"4"]],
+                                                     [ATMContact contactFor:@"Kim Rothwell" andImage:[UIImage imageNamed:@"5"]],
+                                                     [ATMContact contactFor:@"Ashlee Finley" andImage:[UIImage imageNamed:@"6"]],
+                                                     [ATMContact contactFor:@"John Doe" andImage:[UIImage imageNamed:@"7"]],
+                                                     [ATMContact contactFor:@"Janne Doe" andImage:[UIImage imageNamed:@"8"]],
+                                                     [ATMContact contactFor:@"Rick Maddon" andImage:[UIImage imageNamed:@"9"]],
+                                                     [ATMContact contactFor:@"July Safford" andImage:[UIImage imageNamed:@"10"]]
                                                      ]];
     
+}
+
+- (void)searchNameForMention:(NSString *)mention {
+    NSString *name = [mention substringFromIndex:1];
+    [self.filteredArray removeAllObjects];
+    
+    NSPredicate *pFilter = [NSPredicate predicateWithFormat:@"SELF.name CONTAINS[cd] %@", name];
+    
+    self.filteredArray   = [NSMutableArray arrayWithArray:[self.contacts filteredArrayUsingPredicate:pFilter]];
+    
+    [self.tableView reloadData];
 }
 @end
