@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C6FB7187908D30B4F9C84E9 /* libPods-atMentions-AlbertoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B203F8012DE7A6F89266352 /* libPods-atMentions-AlbertoTests.a */; };
+		D320D7AD1AB84E3F00E3AE26 /* ATMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D320D7AC1AB84E3F00E3AE26 /* ATMContact.m */; };
 		D38374761AB78605009C0523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D38374751AB78605009C0523 /* main.m */; };
 		D38374791AB78605009C0523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D38374781AB78605009C0523 /* AppDelegate.m */; };
 		D383747C1AB78605009C0523 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383747B1AB78605009C0523 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 		1691E5E564BBFE70B1F61E04 /* Pods-atMentions-AlbertoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atMentions-AlbertoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-atMentions-AlbertoTests/Pods-atMentions-AlbertoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B203F8012DE7A6F89266352 /* libPods-atMentions-AlbertoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-atMentions-AlbertoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF3F75FD5342AAFE2BF0F29 /* Pods-atMentions-AlbertoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atMentions-AlbertoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-atMentions-AlbertoTests/Pods-atMentions-AlbertoTests.release.xcconfig"; sourceTree = "<group>"; };
+		D320D7AB1AB84E3F00E3AE26 /* ATMContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATMContact.h; path = "atMentions-Alberto/Model/ATMContact.h"; sourceTree = "<group>"; };
+		D320D7AC1AB84E3F00E3AE26 /* ATMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATMContact.m; path = "atMentions-Alberto/Model/ATMContact.m"; sourceTree = "<group>"; };
 		D38374701AB78605009C0523 /* atMentions-Alberto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atMentions-Alberto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38374741AB78605009C0523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38374751AB78605009C0523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,9 +87,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D320D7AE1AB84E4200E3AE26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D320D7AB1AB84E3F00E3AE26 /* ATMContact.h */,
+				D320D7AC1AB84E3F00E3AE26 /* ATMContact.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D38374671AB78605009C0523 = {
 			isa = PBXGroup;
 			children = (
+				D320D7AE1AB84E4200E3AE26 /* Model */,
 				D383749D1AB79610009C0523 /* Tests */,
 				D38374721AB78605009C0523 /* atMentions-Alberto */,
 				D38374711AB78605009C0523 /* Products */,
@@ -285,6 +298,7 @@
 				D38374791AB78605009C0523 /* AppDelegate.m in Sources */,
 				D38374A01AB798C0009C0523 /* ViewController+Tests.m in Sources */,
 				D38374761AB78605009C0523 /* main.m in Sources */,
+				D320D7AD1AB84E3F00E3AE26 /* ATMContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
