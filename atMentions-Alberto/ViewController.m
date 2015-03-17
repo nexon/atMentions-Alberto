@@ -8,16 +8,20 @@
 
 #import "ViewController.h"
 #define CHAR_LIMIT 500
-
+#define NUM_CONTACTS 10
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
 @property (weak, nonatomic) IBOutlet UILabel *charLimitLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewSpace;
+@property (strong, nonatomic) NSMutableArray  *contacts;
 
 - (void)keyboardWillShow:(id)sender;
 - (NSMutableArray *)findMentions:(NSString *)text;
+- (void)loadContacts;
 @end
 
 @implementation ViewController
@@ -27,6 +31,12 @@
     [self.textView becomeFirstResponder];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    
+    self.tableView.delegate   = self;
+    self.tableView.dataSource = self;
+    
+    [self loadContacts];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +54,12 @@
     self.charLimitLabel.text = [NSString stringWithFormat:@"%li", CHAR_LIMIT - text.length];
     
     NSArray *mentions = [self findMentions:text];
+    
+    if(mentions.count > 0) {
+        self.tableView.hidden = NO;
+    } else {
+        self.tableView.hidden = YES;
+    }
     
     NSLog(@"%s: %@", __func__, [self findMentions:text]);
     
@@ -98,5 +114,47 @@
 }
 
 - (void)uselessButtonDidPress:(id)sender {
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.contacts.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    static NSString *ATMContactCell = @"ATMContactCell";
+    
+    ATMContact *contact = self.contacts[indexPath.row];
+    cell = [self.tableView dequeueReusableCellWithIdentifier:ATMContactCell forIndexPath:indexPath];
+    cell.textLabel.text = contact.name;
+    
+    return cell;
+}
+
+- (void)loadContacts
+{
+    self.contacts = [NSMutableArray arrayWithArray:@[[ATMContact contactFor:@"Shannon Leigh" andImage:nil],
+                                                     [ATMContact contactFor:@"Meredith Overmyer" andImage:nil],
+                                                     [ATMContact contactFor:@"Amber Colvard" andImage:nil],
+                                                     [ATMContact contactFor:@"Allie Siarto" andImage:nil],
+                                                     [ATMContact contactFor:@"Kim Rothwell" andImage:nil],
+                                                     [ATMContact contactFor:@"Ashlee Finley" andImage:nil],
+                                                     [ATMContact contactFor:@"John Doe" andImage:nil],
+                                                     [ATMContact contactFor:@"Janne Doe" andImage:nil],
+                                                     [ATMContact contactFor:@"Rick Maddon" andImage:nil],
+                                                     [ATMContact contactFor:@"July Safford" andImage:nil]
+                                                     ]];
+    
 }
 @end
