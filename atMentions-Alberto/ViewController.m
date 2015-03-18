@@ -20,11 +20,13 @@
 @property (strong, nonatomic) NSMutableArray  *contacts;
 @property (strong, nonatomic) NSMutableArray  *filteredArray;
 @property (strong, nonatomic) ATMContact      *selectedContact;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (strong, nonatomic) NSString        *mention;
 
 - (void)keyboardWillShow:(id)sender;
 - (NSMutableArray *)findMentions:(NSString *)text;
 - (void)loadContacts;
+- (void)uselessButtonDidPress:(id)sender;
 @end
 
 @implementation ViewController
@@ -39,6 +41,12 @@
     self.tableView.delegate   = self;
     self.tableView.dataSource = self;
     self.filteredArray        = [NSMutableArray array];
+    
+    [self.addButton addTarget:self action:@selector(uselessButtonDidPress:) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationItem.rightBarButtonItem setTarget:self];
+    [self.navigationItem.rightBarButtonItem setAction:@selector(uselessButtonDidPress:)];
+    [self.navigationItem.leftBarButtonItem setTarget:self];
+    [self.navigationItem.leftBarButtonItem setAction:@selector(uselessButtonDidPress:)];
     
     [self loadContacts];
 }
@@ -120,6 +128,7 @@
 }
 
 - (void)uselessButtonDidPress:(id)sender {
+    NSLog(@"%s: Useless button pressed!", __func__);
 }
 
 

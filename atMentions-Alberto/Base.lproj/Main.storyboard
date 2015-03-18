@@ -102,6 +102,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Post" id="Uhi-a2-J1c"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="01K-90-01T" id="t2p-vU-vAJ"/>
                         <outlet property="charLimitLabel" destination="Tv5-xi-v5D" id="UMh-jG-Nqu"/>
                         <outlet property="containerView" destination="gJi-lt-UsA" id="0xD-Mt-tfP"/>
                         <outlet property="keyboardHeight" destination="vSi-s7-zcW" id="nhq-9D-KWB"/>
