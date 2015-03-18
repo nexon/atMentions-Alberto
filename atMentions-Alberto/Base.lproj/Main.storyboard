@@ -44,11 +44,11 @@
                                         <color key="textColor" red="0.81568627449999997" green="0.0" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PsH-Ss-ScA">
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="143" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PsH-Ss-ScA">
                                         <rect key="frame" x="0.0" y="63" width="568" height="143"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ATMContactCell" textLabel="3tL-Qc-euN" style="IBUITableViewCellStyleDefault" id="LVr-eV-dId">
+                                            <tableViewCell contentMode="scaleToFill" verticalCompressionResistancePriority="250" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ATMContactCell" textLabel="3tL-Qc-euN" style="IBUITableViewCellStyleDefault" id="LVr-eV-dId">
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LVr-eV-dId" id="RdO-rf-8eX">
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -77,7 +77,6 @@
                                     <constraint firstAttribute="bottom" secondItem="01K-90-01T" secondAttribute="bottom" constant="8" id="YYj-hN-EeY"/>
                                     <constraint firstItem="Wmh-3r-512" firstAttribute="leading" secondItem="gJi-lt-UsA" secondAttribute="leading" id="YcQ-bX-OQh"/>
                                     <constraint firstItem="01K-90-01T" firstAttribute="leading" secondItem="gJi-lt-UsA" secondAttribute="leading" constant="8" id="dMn-KW-QgA"/>
-                                    <constraint firstItem="01K-90-01T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wmh-3r-512" secondAttribute="bottom" constant="8" id="mFe-AX-seY"/>
                                     <constraint firstAttribute="bottom" secondItem="PsH-Ss-ScA" secondAttribute="bottom" id="rFi-fT-qtt"/>
                                     <constraint firstItem="PsH-Ss-ScA" firstAttribute="leading" secondItem="gJi-lt-UsA" secondAttribute="leading" id="suA-sg-I61"/>
                                     <constraint firstItem="PsH-Ss-ScA" firstAttribute="top" secondItem="Tv5-xi-v5D" secondAttribute="bottom" constant="39" id="tqv-Ia-cEX"/>
@@ -95,7 +94,7 @@
                             <constraint firstItem="gJi-lt-UsA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="62S-sa-t32"/>
                             <constraint firstItem="gJi-lt-UsA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7iF-TQ-EOa"/>
                             <constraint firstItem="gJi-lt-UsA" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="khA-XW-LPY"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gJi-lt-UsA" secondAttribute="bottom" constant="317" id="vSi-s7-zcW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gJi-lt-UsA" secondAttribute="bottom" priority="750" constant="317" id="vSi-s7-zcW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SmartMoms" id="vQN-bO-2C2">
